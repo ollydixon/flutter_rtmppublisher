@@ -79,7 +79,7 @@ internal class MethodCallHandlerImpl(
             "resumeStreaming" -> {
                 camera!!.resumeVideoStreaming(result)
             }
-            "stopStreaming" -> {
+            "stopVideoStreaming" -> {
                 camera!!.stopVideoStreaming(result)
             }
             "stopVideoRecording" -> {
