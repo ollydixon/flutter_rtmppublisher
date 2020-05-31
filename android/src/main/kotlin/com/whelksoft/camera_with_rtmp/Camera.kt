@@ -673,14 +673,14 @@ class Camera(
     }
 
     override fun onAuthErrorRtmp() {
-        activity!!.runOnUiThread {
+        activity?.runOnUiThread {
             dartMessenger.send(DartMessenger.EventType.ERROR, "Auth error")
         }
     }
 
     override fun onDisconnectRtmp() {
-        rtmpCamera!!.stopStream()
-        activity!!.runOnUiThread {
+        rtmpCamera?.stopStream()
+        activity?.runOnUiThread {
             dartMessenger.send(DartMessenger.EventType.RTMP_STOPPED, "Disconnected")
         }
     }
